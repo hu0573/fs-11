@@ -23,3 +23,66 @@ $text-color: #fff;
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: $third-bg;
+  color: $text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: $secondary-bg;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  border-radius: 8px;
+  width: 350px;
+  max-width: 100%;
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .result-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    margin-bottom: 20px;
+    position: relative;
+    height: 50px;
+
+    .btn {
+      @include button-style($primary-bg, 20px);
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .btn {
+    @include button-style($primary-bg);
+    &.btn-large {
+      width: 100%;
+      margin-top: 10px;
+      padding: 16px;
+      font-size: 18px;
+    }
+  }
+
+  .settings {
+    .setting {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 15px 0;
+    }
+  }
+}
