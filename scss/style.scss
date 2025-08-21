@@ -1,3 +1,23 @@
+$primary-bg: #3b3b98;
+$secondary-bg: #23235b;
+$third-bg: #adf0f7;
+$text-color: #fff;
+
+@mixin button-style($bg-color, $font-size: 16px) {
+  border: none;
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: $font-size;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: lighten($bg-color, 10%);
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
