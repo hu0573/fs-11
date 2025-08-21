@@ -78,3 +78,7 @@ generateEl.addEventListener("click", () => {
     alert(error.message);
   }
 });
+
+clipboardEl.addEventListener("click", () => {
+  navigator.clipboard.writeText(resultEl.innerText);
+});
